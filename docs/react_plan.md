@@ -1,6 +1,6 @@
 ---
 name: Todo App React Vite
-overview: Build a responsive Todo app with React and Vite, featuring CRUD operations, local storage persistence, and mobile-first design. The app will follow separation of concerns with clear boundaries between data layer, business logic, and UI components.
+overview: Build a Todo app with React and Vite, featuring CRUD operations and local storage persistence. The app will follow the design mock pixel-perfect and maintain separation of concerns with clear boundaries between data layer, business logic, and UI components.
 todos: []
 ---
 
@@ -31,7 +31,7 @@ shouldweusereact/
     ├── src/
     │   ├── main.jsx
     │   ├── App.jsx
-    │   ├── index.css (mobile-first base styles)
+    │   ├── index.css (styles matching design)
     │   ├── services/
     │   │   └── localStorage.js (data persistence layer)
     │   ├── hooks/
@@ -51,7 +51,7 @@ shouldweusereact/
 - Initialize Vite project with React template inside `reactapp`
 - Configure `reactapp/package.json` with React and Vite only
 - Set up `reactapp/index.html` entry point
-- Create base mobile-first CSS reset and typography
+- Create base CSS reset and typography matching design
 
 ### 2. Data Layer (`reactapp/src/services/localStorage.js`)
 
@@ -100,7 +100,7 @@ Todo object structure:
 - Fields: name (required), description (optional textarea), limitDate (date input)
 - Submit handler calls `addTodo` or `updateTodo`
 - Validation for required fields
-- Mobile-optimized form layout
+- Form layout matching design
 
 #### `TodoList.jsx`
 
@@ -108,7 +108,7 @@ Todo object structure:
 - Maps over todos array
 - Renders `TodoItem` for each todo
 - Empty state when no todos
-- Responsive grid/list layout
+- Grid/list layout matching design
 
 #### `TodoItem.jsx`
 
@@ -122,19 +122,15 @@ Todo object structure:
 
 ### 5. Styling (`reactapp/src/index.css`)
 
-Mobile-first CSS approach:
+Pixel-perfect implementation of design mock:
 
-- Base styles for mobile (320px+)
-- Typography scale
-- Color scheme (light/dark mode support via CSS variables)
-- Responsive breakpoints:
-  - Mobile: default (< 768px)
-  - Tablet: 768px+
-  - Desktop: 1024px+
-- Card-based layout for todos
-- Touch-friendly button sizes (min 44x44px)
+- Match design exactly (colors, spacing, typography, layout)
+- Typography matching design specifications
+- Color scheme from design
+- Card-based layout for todos as shown in design
+- Button sizes and styles matching design
 - Smooth transitions and hover states
-- Flexbox/Grid for responsive layouts
+- Flexbox/Grid for layout as specified in design
 
 ### 6. Features
 
@@ -161,13 +157,11 @@ Mobile-first CSS approach:
 - Load todos on app initialization
 - Handle localStorage errors gracefully
 
-**Responsive Design:**
+**Pixel-Perfect Design:**
 
-- Single column on mobile
-- Two columns on tablet
-- Three columns on desktop
-- Touch-optimized interactions
-- Readable font sizes
+- Match design mock exactly
+- Consistent layout as specified in design
+- Exact colors, spacing, and typography from design
 
 ## File Changes
 
@@ -206,5 +200,4 @@ Mobile-first CSS approach:
   - Edit todo
   - Delete todo
   - Refresh page (persistence check)
-  - Test on mobile viewport
-  - Test responsive breakpoints
+  - Verify pixel-perfect match with design mock

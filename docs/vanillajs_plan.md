@@ -1,6 +1,6 @@
 ---
 name: Todo App Vanilla JS Vite
-overview: Build a responsive Todo app with vanilla JavaScript and Vite, featuring CRUD operations, local storage persistence, and mobile-first design. The app will follow separation of concerns with clear boundaries between data layer, business logic, and presentation layer.
+overview: Build a Todo app with vanilla JavaScript and Vite, featuring CRUD operations and local storage persistence. The app will follow the design mock pixel-perfect and maintain separation of concerns with clear boundaries between data layer, business logic, and presentation layer.
 todos: []
 ---
 
@@ -31,7 +31,7 @@ shouldweusereact/
     ├── src/
     │   ├── main.js (entry point)
     │   ├── app.js (app initialization)
-    │   ├── index.css (mobile-first base styles)
+    │   ├── index.css (styles matching design)
     │   ├── services/
     │   │   └── localStorage.js (data persistence layer)
     │   ├── models/
@@ -52,7 +52,7 @@ shouldweusereact/
 - Initialize Vite project with vanilla template inside `vanillajsapp`
 - Configure `vanillajsapp/package.json` with Vite only (no React)
 - Set up `vanillajsapp/index.html` entry point
-- Create base mobile-first CSS reset and typography
+- Create base CSS reset and typography matching design
 - Use ES6 modules for code organization
 
 ### 2. Data Layer (`vanillajsapp/src/services/localStorage.js`)
@@ -110,7 +110,7 @@ Todo object structure:
 - Validation for required fields
 - Clear form after submission
 - Edit mode support (pre-fill form with existing todo data)
-- Mobile-optimized form layout
+- Form layout matching design
 - Event delegation for form interactions
 
 #### `vanillajsapp/src/views/TodoList.js`
@@ -118,7 +118,7 @@ Todo object structure:
 - List container rendering
 - Renders list of todos using TodoItem
 - Handles empty state display
-- Responsive grid/list layout
+- Grid/list layout matching design
 - Re-renders on todo state changes
 
 #### `vanillajsapp/src/views/TodoItem.js`
@@ -142,19 +142,15 @@ Todo object structure:
 
 ### 5. Styling (`vanillajsapp/src/index.css`)
 
-Mobile-first CSS approach:
+Pixel-perfect implementation of design mock:
 
-- Base styles for mobile (320px+)
-- Typography scale
-- Color scheme (light/dark mode support via CSS variables)
-- Responsive breakpoints:
-  - Mobile: default (< 768px)
-  - Tablet: 768px+
-  - Desktop: 1024px+
-- Card-based layout for todos
-- Touch-friendly button sizes (min 44x44px)
+- Match design exactly (colors, spacing, typography, layout)
+- Typography matching design specifications
+- Color scheme from design
+- Card-based layout for todos as shown in design
+- Button sizes and styles matching design
 - Smooth transitions and hover states
-- Flexbox/Grid for responsive layouts
+- Flexbox/Grid for layout as specified in design
 - CSS classes for different states (editing, completed, overdue)
 
 ### 6. Entry Point (`vanillajsapp/src/main.js`)
@@ -193,13 +189,11 @@ Mobile-first CSS approach:
 - Handle localStorage errors gracefully
 - TodoManager automatically persists on state changes
 
-**Responsive Design:**
+**Pixel-Perfect Design:**
 
-- Single column on mobile
-- Two columns on tablet
-- Three columns on desktop
-- Touch-optimized interactions
-- Readable font sizes
+- Match design mock exactly
+- Consistent layout as specified in design
+- Exact colors, spacing, and typography from design
 
 **State Management:**
 
@@ -279,8 +273,7 @@ Views will subscribe to TodoManager and re-render when state changes.
   - Edit todo
   - Delete todo
   - Refresh page (persistence check)
-  - Test on mobile viewport
-  - Test responsive breakpoints
+  - Verify pixel-perfect match with design mock
   - Test form validation
   - Test date formatting
   - Test state persistence across page reloads
