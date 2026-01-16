@@ -1,0 +1,4 @@
+Metric,React,Vanilla JS,Δ (absolute),Δ (%)
+Duration,57.7s,63.0s,-5.3s,-8.4%
+Output Tokens,5240,6281,-1041,-16.6%
+Cost,$0.791,$0.973,-$0.182,-18.7%

@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-main section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.app-main h2 {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Form Styles */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.form-group .error {
+  color: #e53e3e;
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e0;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.5rem;
+  background: transparent;
+  font-size: 1.25rem;
+}
+
+.btn-edit:hover {
+  background: #ebf8ff;
+}
+
+.btn-delete:hover {
+  background: #fed7d7;
+}
+
+/* Todo List Styles */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todo-list-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+}
+
+/* Todo Item Styles */
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.todo-item:hover {
+  border-color: #667eea;
+}
+
+.todo-item.completed {
+  background: #f0fff4;
+  border-color: #68d391;
+}
+
+.todo-item.completed .todo-name {
+  text-decoration: line-through;
+  color: #718096;
+}
+
+.todo-item.overdue {
+  background: #fff5f5;
+  border-color: #fc8181;
+}
+
+.todo-item.editing {
+  background: #ebf8ff;
+  padding: 1rem;
+}
+
+.todo-checkbox input {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+.todo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  word-break: break-word;
+}
+
+.todo-description {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-top: 0.25rem;
+  word-break: break-word;
+}
+
+.todo-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #4a5568;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+
+.todo-date.overdue {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem 0.5rem;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .todo-item {
+    flex-wrap: wrap;
+  }
+
+  .todo-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+}
