@@ -1,16 +1,10 @@
 ---
 name: Todo App React Vite
-overview: Build a Todo app with React and Vite, featuring CRUD operations and local storage persistence. The app will follow the design mock pixel-perfect and maintain separation of concerns with clear boundaries between data layer, business logic, and UI components.
+overview: Build a Todo app with React and Vite, featuring CRUD operations and local storage persistence. The app will maintain separation of concerns with clear boundaries between data layer, business logic, and UI components.
 todos: []
 ---
 
 # Todo App Implementation Plan
-
-## Design Reference
-
-Use the design mock as the UI target:
-
-![Todo app design mock](./design.png)
 
 ## Architecture Overview
 
@@ -100,7 +94,7 @@ Todo object structure:
 - Fields: name (required), description (optional textarea), limitDate (date input)
 - Submit handler calls `addTodo` or `updateTodo`
 - Validation for required fields
-- Form layout matching design
+- Clean form layout
 
 #### `TodoList.jsx`
 
@@ -108,7 +102,7 @@ Todo object structure:
 - Maps over todos array
 - Renders `TodoItem` for each todo
 - Empty state when no todos
-- Grid/list layout matching design
+- Grid/list layout
 
 #### `TodoItem.jsx`
 
@@ -122,15 +116,10 @@ Todo object structure:
 
 ### 5. Styling (`reactapp/src/index.css`)
 
-Pixel-perfect implementation of design mock:
-
-- Match design exactly (colors, spacing, typography, layout)
-- Typography matching design specifications
-- Color scheme from design
-- Card-based layout for todos as shown in design
-- Button sizes and styles matching design
+- Clean, modern typography
+- Card-based layout for todos
 - Smooth transitions and hover states
-- Flexbox/Grid for layout as specified in design
+- Flexbox/Grid for layout
 
 ### 6. Features
 
@@ -156,12 +145,6 @@ Pixel-perfect implementation of design mock:
 - Auto-save to localStorage on any change
 - Load todos on app initialization
 - Handle localStorage errors gracefully
-
-**Pixel-Perfect Design:**
-
-- Match design mock exactly
-- Consistent layout as specified in design
-- Exact colors, spacing, and typography from design
 
 ## File Changes
 
@@ -200,4 +183,3 @@ Pixel-perfect implementation of design mock:
   - Edit todo
   - Delete todo
   - Refresh page (persistence check)
-  - Verify pixel-perfect match with design mock

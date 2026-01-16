@@ -1,16 +1,10 @@
 ---
 name: Todo App Vanilla JS Vite
-overview: Build a Todo app with vanilla JavaScript and Vite, featuring CRUD operations and local storage persistence. The app will follow the design mock pixel-perfect and maintain separation of concerns with clear boundaries between data layer, business logic, and presentation layer.
+overview: Build a Todo app with vanilla JavaScript and Vite, featuring CRUD operations and local storage persistence. The app will maintain separation of concerns with clear boundaries between data layer, business logic, and presentation layer.
 todos: []
 ---
 
 # Todo App Implementation Plan (Vanilla JavaScript)
-
-## Design Reference
-
-Use the design mock as the UI target:
-
-![Todo app design mock](./design.png)
 
 ## Architecture Overview
 
@@ -110,7 +104,7 @@ Todo object structure:
 - Validation for required fields
 - Clear form after submission
 - Edit mode support (pre-fill form with existing todo data)
-- Form layout matching design
+- Clean form layout
 - Event delegation for form interactions
 
 #### `vanillajsapp/src/views/TodoList.js`
@@ -118,7 +112,7 @@ Todo object structure:
 - List container rendering
 - Renders list of todos using TodoItem
 - Handles empty state display
-- Grid/list layout matching design
+- Grid/list layout
 - Re-renders on todo state changes
 
 #### `vanillajsapp/src/views/TodoItem.js`
@@ -142,15 +136,10 @@ Todo object structure:
 
 ### 5. Styling (`vanillajsapp/src/index.css`)
 
-Pixel-perfect implementation of design mock:
-
-- Match design exactly (colors, spacing, typography, layout)
-- Typography matching design specifications
-- Color scheme from design
-- Card-based layout for todos as shown in design
-- Button sizes and styles matching design
+- Clean, modern typography
+- Card-based layout for todos
 - Smooth transitions and hover states
-- Flexbox/Grid for layout as specified in design
+- Flexbox/Grid for layout
 - CSS classes for different states (editing, completed, overdue)
 
 ### 6. Entry Point (`vanillajsapp/src/main.js`)
@@ -188,12 +177,6 @@ Pixel-perfect implementation of design mock:
 - Load todos on app initialization
 - Handle localStorage errors gracefully
 - TodoManager automatically persists on state changes
-
-**Pixel-Perfect Design:**
-
-- Match design mock exactly
-- Consistent layout as specified in design
-- Exact colors, spacing, and typography from design
 
 **State Management:**
 
@@ -273,7 +256,6 @@ Views will subscribe to TodoManager and re-render when state changes.
   - Edit todo
   - Delete todo
   - Refresh page (persistence check)
-  - Verify pixel-perfect match with design mock
   - Test form validation
   - Test date formatting
   - Test state persistence across page reloads
